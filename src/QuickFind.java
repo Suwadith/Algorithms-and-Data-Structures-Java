@@ -3,7 +3,7 @@
  */
 public class QuickFind {
 
-    int[] arr = new int[10];
+    public int[] arr = new int[10];
 
     public void createArray(){
         for(int a=0; a<arr.length; a++) {
