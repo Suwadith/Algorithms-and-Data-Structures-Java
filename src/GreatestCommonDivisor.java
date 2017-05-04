@@ -5,7 +5,7 @@ import java.util.Scanner;
  */
 public class GreatestCommonDivisor {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
         System.out.println("First Number: ");
@@ -16,28 +16,28 @@ public class GreatestCommonDivisor {
         int large, small;
 
         //Swaps and makes sure that the largest number gets stored inside variable large
-        if(x>y){
+        if (x > y) {
             large = x;
             small = y;
-        }else{
+        } else {
             large = y;
             small = x;
         }
 
-        int remainder=1;
+        int remainder = 1;
 
         //Operation Executes until Remainder is .
         //If Remainder is 0 then that means we have found the GCD.
-        while(remainder!=0){
-            if(large%small==0){
+        while (remainder != 0) {
+            if (large % small == 0) {
                 remainder = 0;
-            }else{
-                remainder=large%small;
-                large=small;
-                small=remainder;
+            } else {
+                remainder = large % small;
+                large = small;
+                small = remainder;
             }
         }
-            System.out.println(small);
+        System.out.println(small);
     }
 
 }

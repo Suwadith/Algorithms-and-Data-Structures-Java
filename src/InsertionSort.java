@@ -3,22 +3,30 @@
  */
 public class InsertionSort {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
+
+        /*
+    Time Complexity
+
+    Best: Θ(N)
+    Average: Θ(N^2)
+    Worst: O(N^2)
+     */
 
         int[] arr = {2, 10, 8, 6, 7, 3};
 
-        for(int a=1; a<arr.length; a++){
-            int temp = arr[a];
-            for(int b=a; b>0 && ; b--){
-                if(arr[b+1]<arr[b]){
-                    int temp = arr[b+1];
-                    arr[b+1]=arr[b];
-                    arr[b]=temp;
-                }
+        for (int a = 0; a < arr.length; a++) {
+            //Assume the first element is already sorted and set that to current
+            int current = arr[a];
+            int b = a - 1;
+            while (b >= 0 && arr[b] >= current) {
+                arr[b + 1] = arr[b];
+                b--;
             }
+            arr[b + 1] = current;
         }
 
-        for(int i=0; i<arr.length; i++){
+        for (int i = 0; i < arr.length; i++) {
             System.out.println(arr[i]);
         }
 
