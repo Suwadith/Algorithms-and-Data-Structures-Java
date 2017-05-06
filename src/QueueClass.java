@@ -22,6 +22,14 @@ class Queue<obj>{
     public int size(){
         return queue.size();
     }
+
+    public boolean isEmpty(){
+        if(queue.isEmpty()){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }
 
 public class QueueClass {
